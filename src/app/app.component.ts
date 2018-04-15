@@ -30,4 +30,14 @@ export class AppComponent {
         }
       })
   }
+
+  postProfile(){
+    this.http.post(`https://my-json-server.typicode.com/VisheshSingh/json-faker-directory/profiles/`, {
+      name: "james",
+      age: 26
+    })
+      .subscribe((data:any) => {
+        console.log(data);
+      })
+  }
 }
